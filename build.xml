@@ -14,7 +14,7 @@
         <mkdir dir="${build}"/>
     </target>
 
-    <target name="compile" depends="init"
+    <target name="compile" depends="init, copy.images"
                 description="compile the source">
         <!-- Compile the java code from ${src} into ${build} -->
         <javac srcdir="${src}" destdir="${build}"/>
@@ -28,6 +28,10 @@
         <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
         <jar jarfile="${dist}/lib/beerstorming-${DSTAMP}.jar"
                     basedir="${build}"/>
+    </target>
+
+    <target name="copy.images">
+        <copydir src="images" dest="${build}/images" includes="*"/>
     </target>
 
     <target name="clean"

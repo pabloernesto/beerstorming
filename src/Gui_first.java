@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.*;
 import javafx.scene.control.*;
@@ -9,8 +10,8 @@ public class Gui_first extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        Button btn = new Button("Queen - Somebody to Love",
+                    new ImageView("images/somebodyToLove.jpg"));
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override

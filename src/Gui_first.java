@@ -12,6 +12,6 @@ class Gui_first extends Frame {
     }
 
     public static void main(String args[]) {
-        First f=new First();
+        Gui_first f = new Gui_first();
     }
 }

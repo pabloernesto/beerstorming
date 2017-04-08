@@ -1,10 +1,10 @@
 
 public class Rockola {
-
-	String usuario;
+	Db db = new Db();
+	String user;
 
 	public void login(String n) {
-		Db.getUser(n);
+		db.getUser(n);
 		
 	}
 

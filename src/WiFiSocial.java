@@ -1,9 +1,12 @@
 
 public class WiFiSocial {
+	Rockola rockola = new Rockola();
+	Db db = new Db();
+	String user;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public void login(String n) {
+		Usuario u = db.getUser(n);
+		rockola.notificarLogueo(u);
 	}
 
 }

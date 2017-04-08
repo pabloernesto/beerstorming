@@ -1,9 +1,9 @@
 
 public class Db {
 	
-	String user;
+	Usuario user;
 	
-	public String getUser(String n) {
+	public Usuario getUser(String n) {
 		return user;
 	}
 

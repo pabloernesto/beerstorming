@@ -7,7 +7,7 @@ public class Reproduccion {
         num_repr = 0;
     }
 
-    public void sumarReproduccion(void) {
+    public void sumarReproduccion() {
         num_repr += 1;
     }
 }

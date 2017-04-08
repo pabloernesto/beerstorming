@@ -1,3 +1,5 @@
+import java.util.List;
+import java.util.LinkedList;
 
 public class Usuario {
     String nombre;
@@ -5,7 +7,7 @@ public class Usuario {
 
     public Usuario(String nombre) {
         this.nombre = nombre;
-        this.reproducciones = new List<reproducciones>;
+        this.reproducciones = new LinkedList<Reproduccion>();
     }
 
     public void sumarReproduccion(String nombreDeCancion) {

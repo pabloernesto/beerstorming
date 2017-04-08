@@ -1,8 +1,10 @@
 
 public class Db {
-
-	public static void getUser(String n) {
 	
+	String user;
+	
+	public String getUser(String n) {
+		return user;
 	}
 
 	

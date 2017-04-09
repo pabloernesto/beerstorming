@@ -17,10 +17,16 @@ public class Gui_rockola {
                     Gui_searchResults.setScene(primaryStage, getQuery(),
                     username));
 
+        Button pass = new Button("Pasar tema");
+        pass.setOnAction(e -> {
+            Rockola.getInstance().nextSong();
+            Gui_rockola.setScene(primaryStage, username);
+        });
+
         Pane searchbox = new HBox(searchbar, btn);
         Pane currentTrack = getCurrentTrackPane();
         Pane nextOnQueue = getNextOnQueuePane();
-        Pane root = new VBox(20, searchbox, currentTrack, nextOnQueue);
+        Pane root = new VBox(20, searchbox, currentTrack, pass, nextOnQueue);
         Scene scene = new Scene(root, 240, 450);
 
         root.setPadding(new javafx.geometry.Insets(30));

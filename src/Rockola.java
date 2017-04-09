@@ -2,11 +2,18 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class Rockola {
+    static Rockola singleton;
+
     Map<String, Music> songs;
     Map<String, User> users;
     Map<String, User> logged_users;
 
-    public Rockola() {
+    public static Rockola getInstance() {
+        if (singleton == null) singleton = new Rockola();
+        return singleton;
+    }
+
+    protected Rockola() {
         songs = new HashMap();
         users = new HashMap();
         logged_users = new HashMap();

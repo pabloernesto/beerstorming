@@ -2,17 +2,17 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class Rockola {
-    Db db;
+    Map<String, User> users;
     Map<String, User> logged_users;
 
     public Rockola() {
-        db = new Db();
+        users = new HashMap();
         logged_users = new HashMap();
     }
 
     public void notifyLogin(String username) {
         if (!isLogged(username))
-            logged_users.put(username, db.getUser(username));
+            logged_users.put(username, users.get(username));
     }
 
     public boolean isLogged(String username) {

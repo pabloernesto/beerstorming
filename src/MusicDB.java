@@ -26,4 +26,10 @@ public class MusicDB {
         int index = rng.nextInt(songs.size());
         return songs.get(index);
     }
+
+    public Collection<Music> query(String q) {
+        List<Music> res = new ArrayList();
+        for (Music song : songs) if (song.matches(q)) res.add(song);
+        return res;
+    }
 }

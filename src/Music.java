@@ -11,4 +11,15 @@ public class Music {
         this.album = album;
         this.genero = genero;
     }
+
+    public boolean matches(String query) {
+        String q = query.trim().toLowerCase();
+        if (track.toLowerCase().indexOf(q) != -1 ||
+                    artist.toLowerCase().indexOf(q) != -1 ||
+                    album.toLowerCase().indexOf(q) != -1 ||
+                    genero.toLowerCase().indexOf(q) != -1)
+            return true;
+        else
+            return false;
+    }
 }

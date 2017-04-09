@@ -1,2 +1,32 @@
 Track, Artista, Album, Genero
-We are the champions, Queen, ?, Rock
+
+Chinga tu madre, Molotov, ¿Dónde jugarán las niñas?, Rock
+Gimma tha power, Molotov, ¿Dónde jugarán las niñas?, Rock
+Highway To Hell, AC/DC, Highway To Hell, Heavy Metal
+Back in Black, AC/DC, Back in Black, Heavy Metal
+Crazy, Aerosmith, Get a Grip, Hard Rock
+Janie's Got a Gun, Aerosmith, Pump, Hard Rock
+Like a Stone, Audioslave, Audioslave, Rock Alternativo
+Be Yourself, Audioslave, Out of Exile, Rock Alternativo
+Rhymin & Stealin, Beasty Boys, Licenced to III, Hip Hop
+Get it Together, Beasty Boys, III Comunnication, Hip Hop
+Perro amor explota, Bersuit Vergarabat, De La Cabeza Con Bersuit Vergarabat, Rock
+Sr. Cobranza, Bersuit vergarabat, Libertinaje, Rock
+Sun Is Shining, Kaya, Bob Marley, Reggae
+One Love, Bob Marley, Bob Marley and Wailers, Reggae
+Demoliendo Hoteles, Charly García, Piano Bar, Rock
+Yendo de la cama al living, Charly García, Yendo de la cama al living, Rock
+Enjoy The Silence, Depeche Mode, Violator, Rock Electrónico
+Personal Jesus, Depeche Mode, Violator, Rock Electrónico
+Smells Like Teen Spirit, Nirvana, Nevermind, Grunge
+Lithium, Nirvana, Nevermind, Grunge
+Pet Sematary, The Ramones, Brain drain, Punk Rock
+Poison Heart, The Ramones, Mondo Bizarro, Punk Rock
+Molinos de Viento, Mägo de Oz, La leyenda de La Mancha, Folk Metal
+La danza del fuego, Mägo de Oz, Finisterra, Folk Metal
+Smooth Criminal, Michael Jackson, Bad, Pop
+Bad, Michael Jackson, Bad, Pop
+When The Saints Go Marching In, Louis Amstrong, Single, Jazz
+Cheek To Cheek, Ella Fitzgerald & Louis Amstrong, Single, Jazz
+Sweet Little Angel (Live), B.B. King, Single, Blues
+Hit The Road Jack (Original), Ray Charles, Single, Blues

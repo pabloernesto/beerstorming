@@ -21,7 +21,7 @@ public class Gui_login {
         btn.setOnAction(e -> {
             try {
                 WiFiSocial.getInstance().login(textField.getText());
-                Gui_bienvenido.setScene(primaryStage);
+                Gui_bienvenido.setScene(primaryStage, textField.getText());
             } catch (UnregisteredUserException ex) {
                 textField.setText("error: not a user");
             }

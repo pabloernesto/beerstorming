@@ -6,14 +6,14 @@ import javafx.scene.layout.*;
 
 public class Gui_bienvenido {
 
-    public static void setScene(Stage primaryStage) {
+    public static void setScene(Stage primaryStage, String username) {
         primaryStage.setTitle("Bienvenido a Patagonia");
 
         ImageView background = new ImageView("images/wifi2.jpg");
         ImageView rockola = new ImageView("images/rockola.jpg");
         Button btn = new Button("", rockola);
 
-        btn.setOnAction(e -> Gui_rockola.setScene(primaryStage));
+        btn.setOnAction(e -> Gui_rockola.setScene(primaryStage, username));
         rockola.setFitWidth(150);
         rockola.setFitHeight(100);
 

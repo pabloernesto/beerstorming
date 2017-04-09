@@ -7,14 +7,15 @@ import javafx.scene.layout.*;
 public class Gui_rockola {
     static TextField searchbar;
 
-    public static void setScene(Stage primaryStage) {
+    public static void setScene(Stage primaryStage, String username) {
         primaryStage.setTitle("Rockola Patagonia");
 
         searchbar = new TextField("buscar");
         Button btn = new Button("S");
 
         btn.setOnAction(e ->
-                    Gui_searchResults.setScene(primaryStage, getQuery()));
+                    Gui_searchResults.setScene(primaryStage, getQuery(),
+                    username));
 
         Pane searchbox = new HBox(searchbar, btn);
         Pane currentTrack = getCurrentTrackPane();

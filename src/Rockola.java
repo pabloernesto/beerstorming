@@ -52,4 +52,11 @@ public class Rockola {
     public void addUser(String username) {
         if (!isUser(username)) users.put(username, new User(username));
     }
+
+    public void request(String username, Music song) {
+        User u = logged_users.get(username);
+        if (u == null) throw new RuntimeException("User not logged in.");
+        u.addPlayback(song);
+        queue.add(song);
+    }
 }

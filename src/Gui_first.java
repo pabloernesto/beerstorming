@@ -24,7 +24,8 @@ public class Gui_first extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        loadSongs(); // Inicializa la Rockola
+        loadSongs(); // Inicializa MusicDB
+        loadUsers(); // Inicializa Rockola y WiFiSocial
     }
 
     public static void main(String[] args) {
@@ -63,5 +64,12 @@ public class Gui_first extends Application {
         db.loadSong(new Music("Cheek To Cheek", "Ella Fitzgerald & Louis Amstrong", "Single", "Jazz"));
         db.loadSong(new Music("Sweet Little Angel (Live)", "B.B. King", "Single", "Blues"));
         db.loadSong(new Music("Hit The Road Jack (Original)", "Ray Charles", "Single", "Blues"));
+    }
+
+    static void loadUsers() {
+        WiFiSocial w = WiFiSocial.getInstance();
+        String[] names = { "username", "pabloernesto", "emiroldan",
+                    "paulamassofravega", "valentinomoreno" };
+        for (String n : names) w.addUser(n);
     }
 }

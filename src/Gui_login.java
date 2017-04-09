@@ -18,7 +18,14 @@ public class Gui_login {
         background.setFitHeight(300);
         textField.setMaxWidth(200);
 
-        btn.setOnAction(e -> Gui_bienvenido.setScene(primaryStage));
+        btn.setOnAction(e -> {
+            try {
+                WiFiSocial.getInstance().login(textField.getText());
+                Gui_bienvenido.setScene(primaryStage);
+            } catch (UnregisteredUserException ex) {
+                textField.setText("error: not a user");
+            }
+        });
 
         VBox loginForm = new VBox(textField, btn);
         StackPane root = new StackPane(background, loginForm);

@@ -28,6 +28,10 @@ public class Rockola {
         return logged_users.containsKey(username);
     }
 
+    public boolean isUser(String username) {
+        return users.containsKey(username);
+    }
+
     public void notifyLogout(String username) {
         logged_users.remove(username);
     }
@@ -43,5 +47,9 @@ public class Rockola {
         if (currentSong == null)
             currentSong = MusicDB.getInstance().getRandomSong();
         return currentSong;
+    }
+
+    public void addUser(String username) {
+        if (!isUser(username)) users.put(username, new User(username));
     }
 }

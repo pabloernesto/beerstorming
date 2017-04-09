@@ -25,5 +25,6 @@ public class WiFiSocial {
 
     public void addUser(String username) {
         usernames.add(username);
+        Rockola.getInstance().addUser(username);
     }
 }

@@ -1,8 +1,8 @@
 
 public class Music {
-	String track;
-	String Artist;
-	String album;
-	String genero;
+    String track;
+    String artist;
+    String album;
+    String genero;
 
 }

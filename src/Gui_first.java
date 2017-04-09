@@ -10,8 +10,9 @@ public class Gui_first extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button("Queen - Somebody to Love",
-                    new ImageView("images/somebodyToLove.jpg"));
+        ImageView background = new ImageView("images/wifi1.jpg");
+
+        Button btn = new Button("login with Facebook");
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -21,11 +22,12 @@ public class Gui_first extends Application {
         });
 
         StackPane root = new StackPane();
+        root.getChildren().add(background);
         root.getChildren().add(btn);
 
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root);
 
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("WiFi Social");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -16,12 +16,15 @@ public class Gui_login {
 
         background.setFitWidth(300);
         background.setFitHeight(300);
+        textField.setMaxWidth(200);
 
         btn.setOnAction(e -> Gui_bienvenido.setScene(primaryStage));
 
-        StackPane root = new StackPane();
-        root.getChildren().addAll(background, textField, btn);
+        VBox loginForm = new VBox(textField, btn);
+        StackPane root = new StackPane(background, loginForm);
         Scene scene = new Scene(root);
+
+        loginForm.setAlignment(javafx.geometry.Pos.CENTER);
 
         primaryStage.setScene(scene);
         primaryStage.show();

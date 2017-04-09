@@ -31,4 +31,8 @@ public class Rockola {
     public void notifyLogout(String username) {
         logged_users.remove(username);
     }
+
+    public Music getCurrentlyPlaying() {
+        return null; //TODO
+    }
 }

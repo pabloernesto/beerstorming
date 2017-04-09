@@ -35,6 +35,7 @@ public class Rockola {
     }
 
     public Music getCurrentlyPlaying() {
+        if (currentSong == null) nextSong();
         return currentSong;
     }
 
@@ -46,6 +47,7 @@ public class Rockola {
     }
 
     public Music getRandomSong() {
+        if (songs.size() == 0) throw new RuntimeException("No hay canciones");
         int index = new Random().nextInt(songs.size());
         return songs.get(index);
     }

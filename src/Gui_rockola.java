@@ -18,6 +18,8 @@ public class Gui_rockola {
         Pane root = new VBox(searchbox);
         Scene scene = new Scene(root, 240, 450);
 
+        root.setPadding(new javafx.geometry.Insets(30));
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }

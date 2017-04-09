@@ -59,4 +59,12 @@ public class Rockola {
         u.addPlayback(song);
         queue.add(song);
     }
+
+    public Music getNextOnQueue() {
+        try {
+            return queue.peek();
+        } catch (NoSuchElementException e) {
+            return null;
+        }
+    }
 }

@@ -19,7 +19,8 @@ public class Gui_rockola {
 
         Pane searchbox = new HBox(searchbar, btn);
         Pane currentTrack = getCurrentTrackPane();
-        Pane root = new VBox(searchbox, currentTrack);
+        Pane nextOnCue = getNextOnQueuePane();
+        Pane root = new VBox(searchbox, currentTrack, nextOnCue);
         Scene scene = new Scene(root, 240, 450);
 
         root.setPadding(new javafx.geometry.Insets(30));
@@ -40,5 +41,17 @@ public class Gui_rockola {
 
     static String getQuery() {
         return searchbar.getText();
+    }
+
+    static Pane getNextOnQueuePane() {
+        Music song = Rockola.getInstance().getNextOnQueue();
+        if (song == null) return new VBox();
+
+        Label l1 = new Label("Siguiente en cola:");
+        Label track = new Label(song.track);
+        Label artist = new Label(song.artist);
+        Label album = new Label(song.album);
+        Label genero = new Label(song.genero);
+        return new VBox(l1, track, artist, album, genero);
     }
 }

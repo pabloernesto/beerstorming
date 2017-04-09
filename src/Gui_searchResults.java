@@ -5,16 +5,18 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
 public class Gui_searchResults {
+    static TextField searchbar;
 
     public static void setScene(Stage primaryStage, String query) {
         primaryStage.setTitle("Rockola Patagonia");
 
         Button back = new Button("<--");
         Button btn = new Button("S");
-        TextField searchbar = new TextField("buscar");
+        searchbar = new TextField("buscar");
 
-        //~ btn.setOnAction(e -> );//TODO
-        //~ back.setOnAction(e -> );//TODO
+        btn.setOnAction(e ->
+                    Gui_searchResults.setScene(primaryStage, getQuery()));
+        back.setOnAction(e -> Gui_rockola.setScene(primaryStage));
 
         Pane searchbox = new HBox(back, searchbar, btn);
         Pane results = new VBox(searchbar);
@@ -25,5 +27,9 @@ public class Gui_searchResults {
 
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    static String getQuery() {
+        return searchbar.getText();
     }
 }

@@ -22,4 +22,8 @@ public class Music {
         else
             return false;
     }
+
+    public String toString() {
+        return track;
+    }
 }

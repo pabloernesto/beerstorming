@@ -15,8 +15,8 @@ public class Gui_rockola {
         //~ btn.setOnAction(e -> );//TODO
 
         Pane searchbox = new HBox(searchbar, btn);
-        Pane currentTrack = new VBox(); //TODO
-        Pane root = new VBox(searchbox);
+        Pane currentTrack = getCurrentTrackPane();
+        Pane root = new VBox(searchbox, currentTrack);
         Scene scene = new Scene(root, 240, 450);
 
         root.setPadding(new javafx.geometry.Insets(30));

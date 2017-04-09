@@ -51,4 +51,8 @@ public class Rockola {
         int index = new Random().nextInt(songs.size());
         return songs.get(index);
     }
+
+    public void loadSong(Music song) {
+        if (!songs.contains(song)) songs.add(song);
+    }
 }

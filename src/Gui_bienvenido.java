@@ -10,9 +10,12 @@ public class Gui_bienvenido {
         primaryStage.setTitle("Bienvenido a Patagonia");
 
         ImageView background = new ImageView("images/wifi2.jpg");
-        Button btn = new Button("login");
+        ImageView rockola = new ImageView("images/rockola.jpg");
+        Button btn = new Button("", rockola);
 
         //~ btn.setOnAction(e -> );//TODO
+        rockola.setFitWidth(150);
+        rockola.setFitHeight(100);
 
         StackPane root = new StackPane();
         root.getChildren().addAll(background, btn);

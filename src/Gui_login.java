@@ -17,7 +17,7 @@ public class Gui_login {
         background.setFitWidth(300);
         background.setFitHeight(300);
 
-        //~ btn.setOnAction(e -> );//TODO
+        btn.setOnAction(e -> Gui_bienvenido.setScene(primaryStage));
 
         StackPane root = new StackPane();
         root.getChildren().addAll(background, textField, btn);

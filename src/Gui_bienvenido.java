@@ -13,7 +13,7 @@ public class Gui_bienvenido {
         ImageView rockola = new ImageView("images/rockola.jpg");
         Button btn = new Button("", rockola);
 
-        //~ btn.setOnAction(e -> );//TODO
+        btn.setOnAction(e -> Gui_rockola.setScene(primaryStage));
         rockola.setFitWidth(150);
         rockola.setFitHeight(100);
 

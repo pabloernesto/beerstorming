@@ -1,12 +1,13 @@
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 public class Rockola {
     static Rockola singleton;
 
-    Map<String, Music> songs;
+    List<Music> songs;
     Map<String, User> users;
     Map<String, User> logged_users;
+    Music currentSong;
+    Queue<Music> queue;
 
     public static Rockola getInstance() {
         if (singleton == null) singleton = new Rockola();
@@ -14,9 +15,10 @@ public class Rockola {
     }
 
     protected Rockola() {
-        songs = new HashMap();
+        songs = new ArrayList();
         users = new HashMap();
         logged_users = new HashMap();
+        queue = new LinkedList();
     }
 
     public void notifyLogin(String username) {
@@ -33,6 +35,18 @@ public class Rockola {
     }
 
     public Music getCurrentlyPlaying() {
-        return null; //TODO
+        return currentSong;
+    }
+
+    // Cambia el tema actual. Devuelve el nuevo tema.
+    public Music nextSong() {
+        currentSong = queue.poll();
+        if (currentSong == null) currentSong = getRandomSong();
+        return currentSong;
+    }
+
+    public Music getRandomSong() {
+        int index = new Random().nextInt(songs.size());
+        return songs.get(index);
     }
 }

@@ -3,7 +3,6 @@ import java.util.*;
 public class Rockola {
     static Rockola singleton;
 
-    List<Music> songs;
     Map<String, User> users;
     Map<String, User> logged_users;
     Music currentSong;
@@ -15,7 +14,6 @@ public class Rockola {
     }
 
     protected Rockola() {
-        songs = new ArrayList();
         users = new HashMap();
         logged_users = new HashMap();
         queue = new LinkedList();
@@ -42,17 +40,8 @@ public class Rockola {
     // Cambia el tema actual. Devuelve el nuevo tema.
     public Music nextSong() {
         currentSong = queue.poll();
-        if (currentSong == null) currentSong = getRandomSong();
+        if (currentSong == null)
+            currentSong = MusicDB.getInstance().getRandomSong();
         return currentSong;
-    }
-
-    public Music getRandomSong() {
-        if (songs.size() == 0) throw new RuntimeException("No hay canciones");
-        int index = new Random().nextInt(songs.size());
-        return songs.get(index);
-    }
-
-    public void loadSong(Music song) {
-        if (!songs.contains(song)) songs.add(song);
     }
 }

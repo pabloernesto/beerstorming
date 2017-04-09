@@ -10,12 +10,13 @@ public class Gui_rockola {
         primaryStage.setTitle("Rockola Patagonia");
 
         Button btn = new Button("S");
+        TextField searchbar = new TextField("buscar");
 
         //~ btn.setOnAction(e -> );//TODO
 
-        Pane root = new VBox();
-        root.getChildren().addAll(btn);
-        Scene scene = new Scene(root, 460, 240);
+        Pane searchbox = new HBox(searchbar, btn);
+        Pane root = new VBox(searchbox);
+        Scene scene = new Scene(root, 240, 450);
 
         primaryStage.setScene(scene);
         primaryStage.show();

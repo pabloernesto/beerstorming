@@ -25,7 +25,7 @@ public class Gui_searchResults {
         Pane root = new VBox(searchbox, results);
         Scene scene = new Scene(root, 240, 450);
 
-        root.setPadding(new javafx.geometry.Insets(30));
+        root.setPadding(new javafx.geometry.Insets(30, 5, 30, 5));
 
         primaryStage.setScene(scene);
         primaryStage.show();

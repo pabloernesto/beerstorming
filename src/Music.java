@@ -24,6 +24,6 @@ public class Music {
     }
 
     public String toString() {
-        return track;
+        return track + "\n" + artist + " - " + album + "\n" + genero;
     }
 }

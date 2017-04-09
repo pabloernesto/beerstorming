@@ -11,4 +11,9 @@ public class Db {
     public Usuario getUser(String name) {
         return user_store.get(name);
     }
+
+    public void addUser(String name) {
+        if (getUser(name) == null)
+            user_store.put(name, new Usuario(name));
+    }
 }

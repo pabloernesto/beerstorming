@@ -17,8 +17,13 @@ public class WiFiSocial {
         usernames = new HashSet();
     }
 
-    public void login(String n){
-        rockola.notifyLogin(n);
+    public void login(String username) throws UnregisteredUserException {
+        if (!usernames.contains(username))
+            throw new UnregisteredUserException(username + "is not registered");
+        rockola.notifyLogin(username);
     }
 
+    public void addUser(String username) {
+        usernames.add(username);
+    }
 }

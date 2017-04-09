@@ -10,8 +10,15 @@ public class User {
         this.playbacks = new LinkedList<Playback>();
     }
 
-    public void addPlayback(String nombreDeCancion) {
-        // buscar reproducciones de <nombreDeCancion>
-        // sumarle uno
+    public void addPlayback(Music song) {
+        Playback p = getPlayback(song);
+        if (p == null) p = new Playback(song);
+        p.addPlayback();
+    }
+
+    public Playback getPlayback(Music song) {
+        for (Playback p : playbacks)
+            if (p.song.equals(song)) return p;
+        return null;
     }
 }

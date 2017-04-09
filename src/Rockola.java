@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class Rockola {
     Db db;
-    Map<String, Usuario> logged_users;
+    Map<String, User> logged_users;
 
     public Rockola() {
         db = new Db();
